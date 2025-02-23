@@ -5,17 +5,17 @@
   "type": "module",
   "files": ["dist"],
   "module": "./dist/ideias-ui-kit.js",
+  "types": "./dist/index.d.ts",
   "exports":{
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/ideias-ui-kit.js",
-      "require": "./dist/brian-component-lib.umd.cjs",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/ideias-ui-kit.umd.js"
     }
   },
-  "types": "./dist/index.d.ts",
   "scripts": {
     "ui:dev": "vite",
-    "ui:build": "run-p ui:type-check \"ui:build-only {@}\" --",
+    "build": "run-p ui:type-check \"ui:build-only {@}\" --",
     "ui:preview": "vite preview",
     "ui:test:unit": "vitest",
     "ui:build-only": "vite build",

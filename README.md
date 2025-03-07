@@ -37,3 +37,9 @@ pnpm build
 ```sh
 pnpm test:unit
 ```
+
+### Lint with [ESLint](https://eslint.org/)
+
+```sh
+pnpm lint
+```

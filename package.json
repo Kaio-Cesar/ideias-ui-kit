@@ -19,16 +19,16 @@
     "./dist"
   ],
   "scripts": {
-    "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" --",
-    "preview": "vite preview",
-    "test:unit": "vitest",
-    "build-only": "vite build",
-    "type-check": "vue-tsc --build",
-    "lint:oxlint": "oxlint . --fix -D correctness --ignore-path .gitignore",
-    "lint:eslint": "eslint . --fix",
-    "lint": "run-s lint:*",
-    "format": "prettier --write src/"
+    "ui:dev": "vite",
+    "build": "run-p ui:type-check \"ui:build-only {@}\" --",
+    "ui:preview": "vite preview",
+    "ui:test:unit": "vitest",
+    "ui:build-only": "vite build",
+    "ui:type-check": "vue-tsc --build",
+    "ui:lint:oxlint": "oxlint . --fix -D correctness --ignore-path .gitignore",
+    "ui:lint:eslint": "eslint . --fix",
+    "ui:lint": "run-s lint:*",
+    "ui:format": "prettier --write src/"
   },
   "dependencies": {
     "@tailwindcss/vite": "catalog:",

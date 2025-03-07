@@ -16,10 +16,14 @@ export default defineConfig({
     vue(),
     vueDevTools(),
     dts({
-      tsconfigPath: 'tsconfig.json',
+      tsconfigPath: 'tsconfig.build.json',
       cleanVueFileName: true,
       exclude: ['src/__test__/**', 'src/**/__story__/**', 'src/**/*.story.vue'],
       rollupTypes: true,
+      include: ['src/**/*.vue', 'src/**/*.ts'],
+      compilerOptions: {
+        declaration: true,
+      },
     }),
   ],
   resolve: {
